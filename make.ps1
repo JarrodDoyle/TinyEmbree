@@ -19,7 +19,7 @@ if ($localRenderLibPath)
 elseif (-not(Test-Path -Path "prebuilt" -PathType Container))
 {
     # Download the prebuilt binaries for TBB and Embree from GitHub
-    Invoke-WebRequest -Uri "https://github.com/pgrit/RenderLibs/releases/download/v$renderLibVersion/RenderLibs-v$renderLibVersion.zip" -OutFile "prebuilt.zip"
+    Invoke-WebRequest -Uri "https://github.com/JarrodDoyle/RenderLibs/releases/download/v$renderLibVersion/RenderLibs-v$renderLibVersion.zip" -OutFile "prebuilt.zip"
     Expand-Archive "prebuilt.zip" -DestinationPath ./prebuilt
     rm prebuilt.zip
 }
