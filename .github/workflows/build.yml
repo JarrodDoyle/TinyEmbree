@@ -50,10 +50,11 @@ jobs:
     - name: Upload .nupkg
       uses: actions/upload-artifact@v3
       with:
+        name: pkg
         path: ${{github.workspace}}/TinyEmbree/bin/**/*.nupkg
 
-    - name: Publish on version change
-      uses: alirezanet/publish-nuget@v3.0.4
-      with:
-        PROJECT_FILE_PATH: TinyEmbree/TinyEmbree.csproj
-        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+    # - name: Publish on version change
+    #   uses: alirezanet/publish-nuget@v3.0.4
+    #   with:
+    #     PROJECT_FILE_PATH: TinyEmbree/TinyEmbree.csproj
+    #     NUGET_KEY: ${{secrets.NUGET_API_KEY}}
