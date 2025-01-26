@@ -72,9 +72,11 @@ namespace SeeSharp.Core.Tests.Geometry {
             };
 
             Assert.True(rt.IsOccluded(a, b));
-            Assert.True(rt.IsOccluded(b, a));
             Assert.True(!rt.IsOccluded(a, c));
+            Assert.True(!rt.IsOccluded(b, a));
+            Assert.True(!rt.IsOccluded(b, c));
             Assert.True(!rt.IsOccluded(c, a));
+            Assert.True(rt.IsOccluded(c, b));
         }
 
         [Fact]
